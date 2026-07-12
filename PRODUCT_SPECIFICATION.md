@@ -312,6 +312,27 @@ Not Included
 
 ---
 
+# Golden Path
+
+The first player experience should establish the core purpose of Code Reforge within the first ten minutes.
+
+1. Player opens Code Reforge.
+2. The player is asked how long it has been since they last coded.
+3. The Guild Master asks what areas feel the rustiest.
+4. The player is introduced to the forgotten town.
+5. The player enters the Tavern.
+6. The Quest Board presents a single beginner quest.
+7. The player completes a short Python challenge.
+8. The completed quest visibly changes the town.
+9. The Merchant introduces the hint system.
+10. The player sees the next town unlock and is encouraged to continue.
+
+The first quest should be intentionally approachable.
+
+The town's connection to the player's coding confidence should be shown through progression rather than directly explained.
+
+---
+
 # Engineering Principles
 
 - Ship small increments.
