@@ -1,0 +1,278 @@
+:root {
+  color: #f7ead2;
+  background: #261713;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(226, 162, 72, 0.24), transparent 30rem),
+    linear-gradient(135deg, #2a1815 0%, #4c2b1d 46%, #1e2721 100%);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.title-panel,
+.onboarding-panel,
+.tavern-layout {
+  background: rgba(64, 37, 25, 0.9);
+  border: 1px solid rgba(245, 205, 137, 0.34);
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(22, 9, 4, 0.5);
+  width: min(100%, 980px);
+}
+
+.title-panel {
+  padding: clamp(2rem, 8vw, 5.5rem);
+  text-align: center;
+}
+
+.eyebrow,
+.quest-label {
+  color: #f6bc67;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  color: #fff4d9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 8vw, 5.75rem);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #ffe6b3;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.tagline {
+  color: #f4d5a3;
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  margin: 0 auto 2rem;
+  max-width: 44rem;
+}
+
+.title-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.button,
+.choice {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  min-height: 2.75rem;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.button {
+  font-weight: 800;
+  padding: 0.75rem 1.15rem;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button:not(:disabled):hover,
+.choice:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: #e8a34f;
+  color: #2a170f;
+}
+
+.primary:not(:disabled):hover {
+  background: #ffc46b;
+}
+
+.secondary {
+  background: rgba(255, 244, 217, 0.08);
+  border-color: rgba(255, 230, 179, 0.55);
+  color: #ffe6b3;
+}
+
+.secondary:hover {
+  background: rgba(255, 244, 217, 0.15);
+}
+
+.onboarding-panel {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.onboarding-panel h1,
+.tavern-layout h1 {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+}
+
+.choice-group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.choice-group legend {
+  color: #fff4d9;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.choice-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.choice {
+  background: rgba(255, 244, 217, 0.08);
+  border-color: rgba(255, 230, 179, 0.2);
+  color: #f7ead2;
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+.choice.selected {
+  background: rgba(232, 163, 79, 0.24);
+  border-color: #e8a34f;
+  color: #fff4d9;
+}
+
+.tavern-layout {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.tavern-header {
+  grid-column: 1 / -1;
+}
+
+.guild-message {
+  color: #f2d6aa;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 56rem;
+}
+
+.player-profile,
+.quest-card {
+  background: rgba(38, 23, 19, 0.72);
+  border: 1px solid rgba(245, 205, 137, 0.26);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.player-profile {
+  align-self: start;
+}
+
+.player-profile h2,
+.quest-card h2 {
+  margin-bottom: 1rem;
+}
+
+dl {
+  margin: 0;
+}
+
+.player-profile dl,
+.quest-details {
+  display: grid;
+  gap: 0.9rem;
+}
+
+dt {
+  color: #d9aa70;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+dd {
+  color: #fff4d9;
+  margin: 0.2rem 0 0;
+}
+
+.quest-board {
+  min-width: 0;
+}
+
+.quest-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.quest-card p {
+  color: #efd2a6;
+  line-height: 1.6;
+}
+
+.quest-details {
+  border-block: 1px solid rgba(245, 205, 137, 0.2);
+  padding-block: 1rem;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 1rem;
+  }
+
+  .tavern-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .player-profile {
+    order: 2;
+  }
+
+  .quest-board {
+    order: 1;
+  }
+}
